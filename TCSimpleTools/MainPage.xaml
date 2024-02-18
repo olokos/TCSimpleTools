@@ -1,0 +1,20 @@
+﻿<Page
+    x:Class="TCSimpleTools.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:TCSimpleTools"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+            <TextBlock x:Name="txtBlock" Text="Windows Version: {version}" Margin="10" FontSize="20"/>
+            <TextBlock x:Name="txtDeviceFamily" Text="Device Family: {DeviceFamily}" Margin="10" FontSize="20"/>
+            <TextBlock x:Name="txtDeviceFamilyVersion" Text="Device Family Version: {DeviceFamilyVersion}" Margin="10" FontSize="20"/>
+            <TextBlock x:Name="txtProductName" Text="Product Name: {ProductName}" Margin="10" FontSize="20"/>
+        </StackPanel>
+    </Grid>
+    
+</Page>

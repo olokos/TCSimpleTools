@@ -154,5 +154,18 @@ namespace TCSimpleTools
             }
         }
 
+        private async void Refresh_Click(object  sender, RoutedEventArgs routedEventArgs)
+        {
+            // Show loading animation
+            LoadingIndicator.Visibility = Visibility.Visible;
+
+            GetWindowsVersion();
+            await Task.Delay(3000); // Wait for 3 seconds so the refresh would show the loading bar
+
+
+            // Hide loading animation after animation ends
+            LoadingIndicator.Visibility = Visibility.Collapsed;
+        }
+
     }
 }

@@ -15,7 +15,12 @@
             <TextBlock x:Name="txtDeviceFamilyVersion" Text="Device Family Version: {DeviceFamilyVersion}" Margin="10" FontSize="20"/>
             <TextBlock x:Name="txtProductName" Text="Product Name: {ProductName}" Margin="10" FontSize="20"/>
 
-            <Button Content="Open Logs" Click="OpenLogs_Click" HorizontalAlignment="Center"/>
+            <ProgressBar x:Name="LoadingIndicator" IsIndeterminate="True" Visibility="Collapsed"  Width="auto" Height="20" Margin="5"/>
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="20">
+                <Button Content="Refresh" Click="Refresh_Click" HorizontalAlignment="Center" Margin="0,0,50,0" Padding="10,5,10,5" />
+                <Button Content="Open Logs" Click="OpenLogs_Click" HorizontalAlignment="Center"/>
+            </StackPanel>
         </StackPanel>
     </Grid>
     

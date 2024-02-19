@@ -10,10 +10,12 @@
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
-            <TextBlock x:Name="txtBlock" Text="Windows Version: {version}" Margin="10" FontSize="20"/>
+            <TextBlock x:Name="txtWindowsVersion" Text="Windows Version: {version}" Margin="10" FontSize="20"/>
             <TextBlock x:Name="txtDeviceFamily" Text="Device Family: {DeviceFamily}" Margin="10" FontSize="20"/>
             <TextBlock x:Name="txtDeviceFamilyVersion" Text="Device Family Version: {DeviceFamilyVersion}" Margin="10" FontSize="20"/>
             <TextBlock x:Name="txtProductName" Text="Product Name: {ProductName}" Margin="10" FontSize="20"/>
+
+            <Button Content="Open Logs" Click="OpenLogs_Click" HorizontalAlignment="Center"/>
         </StackPanel>
     </Grid>
     

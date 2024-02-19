@@ -9,7 +9,7 @@
   <Identity
     Name="a24dbbc1-d081-41d4-9e92-d34cac371a2f"
     Publisher="CN=olokos"
-    Version="0.1.2.0" />
+    Version="0.1.4.0" />
 
   <mp:PhoneIdentity PhoneProductId="a24dbbc1-d081-41d4-9e92-d34cac371a2f" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
@@ -37,7 +37,7 @@
         Square44x44Logo="Assets\Square44x44Logo.png"
         Description="TCSimpleTools"
         BackgroundColor="transparent">
-        <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png"/>
+        <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png" Square71x71Logo="Assets\SmallTile.png" Square310x310Logo="Assets\LargeTile.png"/>
         <uap:SplashScreen Image="Assets\SplashScreen.png" />
       </uap:VisualElements>
     </Application>

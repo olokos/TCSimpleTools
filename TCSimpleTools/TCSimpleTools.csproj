@@ -210,9 +210,6 @@
     <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
       <Version>6.2.14</Version>
     </PackageReference>
-    <PackageReference Include="System.Drawing.Common">
-      <Version>8.0.2</Version>
-    </PackageReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="olokos.pfx" />

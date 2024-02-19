@@ -150,6 +150,7 @@ namespace TCSimpleTools
                 // Other exceptions
                 var messageDialog = new MessageDialog("An error occurred: " + ex.Message);
                 await messageDialog.ShowAsync();
+                Application.Current.Exit();
             }
         }
 

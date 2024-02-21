@@ -9,7 +9,7 @@
   <Identity
     Name="a24dbbc1-d081-41d4-9e92-d34cac371a2f"
     Publisher="CN=olokos"
-    Version="0.1.6.0" />
+    Version="0.1.7.0" />
 
   <mp:PhoneIdentity PhoneProductId="a24dbbc1-d081-41d4-9e92-d34cac371a2f" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 

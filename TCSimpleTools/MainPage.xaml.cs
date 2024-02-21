@@ -20,6 +20,7 @@ namespace TCSimpleTools
         public string DeviceFamily { get; private set; }
         public string DeviceFamilyVersion { get; private set; }
         public string ProductName { get; private set; }
+        public string DeviceForm { get; private set; }
 
         public MainPage()
         {
@@ -29,7 +30,7 @@ namespace TCSimpleTools
 
         private async void GetWindowsVersion()
         {
-            // Try to read all 4 variables, each of them might not exist
+            // Try to read all 5 variables, each of them might not exist
             try
             {
                 var analyticsInfo = AnalyticsInfo.VersionInfo;
@@ -80,6 +81,18 @@ namespace TCSimpleTools
                     version = $"{v1}.{v2}.{v3}.{v4}";
                 }
 
+                // Try to read DeviceForm - Which does not exist on Win11, so most like wont exist in general
+                try
+                {
+                    var analyticsInfo = AnalyticsInfo.DeviceForm;
+                    //await LogToFile("Device Family set successfully: " + DeviceFamily);
+                }
+                catch (Exception ex)
+                {
+                    DeviceForm = "NOT FOUND";
+                    await LogErrorToFile("Error setting DeviceForm: " + ex.Message);
+                }
+
                 // Set values to the TextBoxes
                 txtWindowsVersion.Text = $"Windows Version: {version}";
                 txtWindowsVersion.IsTextSelectionEnabled = true;
@@ -92,9 +105,12 @@ namespace TCSimpleTools
 
                 txtProductName.Text = $"Product Name: {ProductName}";
                 txtProductName.IsTextSelectionEnabled = true;
+                
+                txtDeviceForm.Text = $"DeviceForm: {DeviceForm}";
+                txtDeviceForm.IsTextSelectionEnabled = true;
 
                 // Logging variables
-                await LogToFile(txtWindowsVersion.Text + "\n" + txtDeviceFamily.Text + "\n" + txtDeviceFamilyVersion.Text + "\n" + txtProductName.Text);
+                await LogToFile(txtWindowsVersion.Text + "\n" + txtDeviceFamily.Text + "\n" + txtDeviceFamilyVersion.Text + "\n" + txtProductName.Text + "\n" + txtDeviceForm.Text);
             }
             catch (Exception ex)
             {

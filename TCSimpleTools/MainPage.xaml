@@ -14,6 +14,7 @@
             <TextBlock x:Name="txtDeviceFamily" Text="Device Family: {DeviceFamily}" Margin="10" FontSize="20"/>
             <TextBlock x:Name="txtDeviceFamilyVersion" Text="Device Family Version: {DeviceFamilyVersion}" Margin="10" FontSize="20"/>
             <TextBlock x:Name="txtProductName" Text="Product Name: {ProductName}" Margin="10" FontSize="20"/>
+            <TextBlock x:Name="txtDeviceForm" Text="DeviceForm: {DeviceForm}" Margin="10" FontSize="20"/>
 
             <ProgressBar x:Name="LoadingIndicator" IsIndeterminate="True" Visibility="Collapsed"  Width="auto" Height="20" Margin="5"/>
 
